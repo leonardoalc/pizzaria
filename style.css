@@ -67,6 +67,8 @@ a.nav_opt {
     margin-top: 9px;
 
     overflow: hidden;
+
+    transition: .4s;
 }
 a.nav_opt:hover {
     text-decoration: underline;
@@ -287,5 +289,8 @@ footer a::after {
     }
     #ultimaimg {
         margin-right: auto;
+    }
+    a.nav_opt {
+        font-size: 1em;
     }
 }
