@@ -291,6 +291,6 @@ footer a::after {
         margin-right: auto;
     }
     a.nav_opt {
-        font-size: 1em;
+        font-size: .9em;
     }
 }
