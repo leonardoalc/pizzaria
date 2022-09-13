@@ -1,10 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-    --font0: "Lobster", Georgia, 'Times New Roman', Times, serif;
-    --font1: "Noto Serif", 'Times New Roman', Times, serif;
+    --font0: "Lobster", Georgia, sans-serif;
+    --font1: "Roboto", Arial, sans-serif;
+    --font2: "Montserrat", Arial, Helvetica, sans-serif;
 
     --cortema: #03565d;
     --corh1: #800000;
@@ -14,6 +16,7 @@
 }
 .dark_mode:root {
     --bg: #18191A;
+    --corh1: #b60000;
     --bg-prod: #242526;
     --txt-color: white;
 }
@@ -40,6 +43,8 @@ nav {
     background-color: #03565d;
 
     max-width: 1600px;
+
+    font-family: var(--font1);
 }
 nav h1 {
     font-family: var(--font0);
@@ -143,7 +148,7 @@ main {
     margin-top: 20px;
 }
 #prod_container h1 {
-    font-family: var(--font0);
+    font-family: var(--font3);
     font-variant: small-caps;
     font-size: 2.67em;
 
@@ -161,6 +166,8 @@ div.anuncios {
 .produtos {
     display: inline-block;
     position: relative;
+
+    font-family: var(--font1);
 
     border-radius: 25px 25px 0px 0px;
 
@@ -192,7 +199,7 @@ div.anuncios {
     border-bottom: 3px solid var(--corh1);
 }
 .anuncios h2 {
-    font-family: var(--font0);
+    font-family: var(--font3);
     font-variant: small-caps;
     font-size: 2em;
 
@@ -205,11 +212,11 @@ div.anuncios {
 }
 .produtos h3 {
     text-align: center;
-    font-family: var(--font1);
+    font-family: var(--font3);
 }
 .preco {
-    font-family: var(--font1);
-    color: #800000;
+    font-family: var(--font3);
+    color: var(--corh1);
     margin-top: 10px;
     text-indent: 1em;
 }
