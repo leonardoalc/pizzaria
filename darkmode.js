@@ -1,6 +1,6 @@
 let html = document.querySelector("html")
-let toggle = document.getElementById("toggle_theme")
+let toggle = document.getElementById("darkmode")
 
 toggle.addEventListener("change", () => {
-    html.classList.toggle("dark_mode")
+    html.classList.toggle("dark-mode")
 })

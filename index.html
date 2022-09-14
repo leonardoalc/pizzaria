@@ -4,113 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Pizzaria Forma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <title>Document</title>
 </head>
 <body>
-    <section id="nav_sect">
-        <nav>
-            <h1>Forma</h1>
-            <a href="#" class="nav_opt">restaurantes</a>
-            <a href="#" class="nav_opt">contato</a>
-            <input type="checkbox" id="toggle_theme" onclick="darkmode()">
-        </nav>
-    </section>
+    <div id="container-header">
+        <header>
+            <picture>
+                <source media="(max-width: 470px)" srcset="imagens/logo-pq.png" type="image/png">
+                <img src="imagens/logo.png" alt="Forma Logo" id="logo">
+            </picture>
+            <nav>
+                <ul>
+                    <li><a href="#">restaurantes</a></li>
+                    <li><a href="#">contato</a></li>
+                </ul>
+                <input type="checkbox" id="darkmode">
+            </nav>
+        </header>
+    </div>
     <main>
-        <section id="destaques">
-
-            <div id="destaquediv">
-                <img src="imagens/destaque-anuncio.jpg" alt="destaque-anuncio" class="imagensdestaque">
-                <img src="imagens/destaque-pizza.jpg" alt="pizza" class="imagensdestaque">
-                <img src="imagens/destaque-taco.jpg" alt="taco" class="imagensdestaque" id="ultimaimg">
-            </div>
-        </section>
-        <section id="prod_container">
-            <div class="anuncios">
-                <h1>Produtos</h1>
-                <h2>Pizzas</h2>
-                <div class="produtos">
-                    <img src="imagens/produto-pizza-familia.jpg" alt="Pizza Família">
+        <div class="destaque">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!--CONTAINER PARA PIZZAS-->
+        <h2 class="title-prod">Pizzas</h2>
+        <div class="container-grid">
+            <div class="produto">
+                <div>
                     <h3>Pizza Família</h3>
-                    <p>Sabores: Calabresa, Marguerita, Frango com Catupiry, Bacon</p>
+                    <p class="prod-desc">Sabores: Calabresa, Marguerita, Frango com Catupiry, Bacon</p>
                     <p class="preco"><strong>R$69,90</strong></p>
                 </div>
-                <div class="produtos">
-                    <img src="imagens/produto-pizza-media.jpg" alt="Pizza Família">
-                    <h3>Pizza Média</h3>
-                    <p>Sabores: Calabresa, 4 queijos, Alho, Frango com Catupiry</p>
-                    <p class="preco"><strong>R$39,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-pizza-meiomeio.jpg" alt="Pizza Família">
-                    <h3>Pizza Meio a Meio</h3>
-                    <p>Sabores: Calabresa, Marguerita, Frango com Catupiry, Bacon</p>
-                    <p class="preco"><strong>R$79,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-pizza-broto.jpg" alt="Pizza Família">
-                    <h3>Pizza Broto</h3>
-                    <p>Sabores: Brigadeiro, Banana, M&M, Morango e Ovomaltine</p>
-                    <p class="preco"><strong>R$24,90</strong></p>
-                </div>
-                <!---------------------------------------------------BOLOS--------------------------------------------------->
-                <h2>Bolos</h2>
-                <div class="produtos">
-                    <img src="imagens/produto-bolo-brigadeiro.jpg" alt="Pizza Família">
-                    <h3>Bolo Brigadeiro</h3>
-                    <p>Bolo de chocolate, recheio e cobertura de brigadeiro</p>
-                    <p class="preco"><strong>R$119,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-bolo-palha.jpg" alt="Pizza Família">
-                    <h3>Bolo Palha Italiana</h3>
-                    <p>Duas fatias de bolo de chocolate recheadas com palha italiana</p>
-                    <p class="preco"><strong>R$119,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-bolo-chocolatebranco.jpg" alt="Pizza Família">
-                    <h3>Bolo chocolate Branco</h3>
-                    <p>Bolo com recheio, cobertura e decoração de chocolate branco</p>
-                    <p class="preco"><strong>R$119,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-bolo-morango.jpg" alt="Pizza Família">
-                    <h3>Bolo Morango</h3>
-                    <p>Bolo de chocolate recheado com brigadeiro e morango</p>
-                    <p class="preco"><strong>R$119,90</strong></p>
-                </div>
-                <!-----------------------------------------------------BEBIDAS----------------------------------------------------->
-                <h2>Bebidas</h2>
-                <div class="produtos">
-                    <img src="imagens/produto-refrigerante-2litros.jpg" alt="Pizza Família">
-                    <h3>Refrigerante 2 Litros</h3>
-                    <p>Coca-Cola, Guaraná Jesus, Dolly, Fanta e Pepsi</p>
-                    <p class="preco"><strong>R$18,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-refrigerante-lata.jpg" alt="Pizza Família">
-                    <h3>Refrigente Latinha</h3>
-                    <p>Coca-Cola, Guaraná Jesus, Dolly, Fanta e Pepsi 250ml</p>
-                    <p class="preco"><strong>R$12,90</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-agua.jpg" alt="Pizza Família">
-                    <h3>Água</h3>
-                    <p>Água mineral crystal com e sem gás 250ml</p>
-                    <p class="preco"><strong>R$7,50</strong></p>
-                </div>
-                <div class="produtos">
-                    <img src="imagens/produto-mate.jpg" alt="Pizza Família">
-                    <h3>Mate Leão</h3>
-                    <p>Mate natural<br>250ml</p>
-                    <p class="preco"><strong>R$19,90</strong></p>
+                <div class="img-container">
+                    <img src="imagens/produto-pizza-familia.jpg" alt="" class="img-produto">
                 </div>
             </div>
-
-        </section>
+            <div class="produto">
+                <div>
+                    <h3>Pizza Média</h3>
+                    <p class="prod-desc">Sabores: Calabresa, 4 Queijos, Alho, Frango com Catupiry</p>
+                    <p class="preco"><strong>R$44,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-pizza-media.jpg" alt="Pizza Media" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Pizza Meio a Meio</h3>
+                    <p class="prod-desc">Sabores: Calabresa, Marguerita, Frango com Catupiry, Bacon</p>
+                    <p class="preco"><strong>R$72,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-pizza-meiomeio.jpg" alt="Pizza meio a meio" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Pizza Broto</h3>
+                    <p class="prod-desc">Sabores: Brigadeiro, Banana, M&M, Morango e Ovomaltine</p>
+                    <p class="preco"><strong>R$29,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-pizza-broto.jpg" alt="Pizza Broto" class="img-produto">
+                </div>
+            </div>
+        </div>
+        <!--CONTAINER PARA BOLOS-->
+        <h2 class="title-prod">Bolos</h2>
+        <div class="container-grid">
+            <div class="produto">
+                <div>
+                    <h3>Bolo de Brigadeiro</h3>
+                    <p class="prod-desc">Bolo de chocolate, recheio e cobertura de brigadeiro</p>
+                    <p class="preco"><strong>R$132,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-bolo-brigadeiro.jpg" alt="Bolo de Brigadeiro" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Bolo de Palha Italiana</h3>
+                    <p class="prod-desc">Bolo de chocolate recheado e coberto com palha italiana</p>
+                    <p class="preco"><strong>R$132,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-bolo-palha.jpg" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Bolo de Chocolate Branco</h3>
+                    <p class="prod-desc">Bolo festa recheado e coberto com chocolate branco, decorado com barra de chocolate branco</p>
+                    <p class="preco"><strong>R$132,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-bolo-chocolatebranco.jpg" alt="Bolo de chocolate branco" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Bolo de Morango</h3>
+                    <p class="prod-desc">Bolo festa recheado com creme de morango e doce de leite, coberto com chantilly e decorado com morangos</p>
+                    <p class="preco"><strong>R$132,90</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-bolo-morango.jpg" alt="" class="img-produto">
+                </div>
+            </div>
+        </div>
+        <!--CONTAINER PARA BEBIDAS-->
+        <h2 class="title-prod">Bebidas</h2>
+        <div class="container-grid">
+            <div class="produto">
+                <div>
+                    <h3>Refrigente Latinha</h3>
+                    <p class="prod-desc">Sabores: Brigadeiro, Banana, M&M, Morango e Ovomaltine</p>
+                    <p class="preco"><strong>R$20,77</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-refrigerante-lata.jpg" alt="Refrigente Latinha" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Refrigerante 3 Litros</h3>
+                    <p class="prod-desc">Coca-Cola, Guaraná Jesus, Dolly, Fanta e Pepsi</p>
+                    <p class="preco"><strong>R$24,60</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-refrigerante-2litros.jpg" alt="Refrigente 2 litros" class="img-produto">
+                </div>
+            </div>
+            <div class="produto">
+                <div>
+                    <h3>Pizza Broto</h3>
+                    <p class="prod-desc">Sabores: Brigadeiro, Banana, M&M, Morango e Ovomaltine</p>
+                    <p class="preco"><strong>R$12,50</strong></p>
+                </div>
+                <div class="img-container">
+                    <img src="imagens/produto-pizza-broto.jpg" alt="" class="img-produto">
+                </div>
+            </div>
+        </div>
     </main>
-    <section id="footer_sect">
+    <div id="container-footer">
         <footer>
             <ul class="footer_infos">
                 <li><strong>CPNJ</strong></li>
@@ -123,7 +167,7 @@
             </ul>
             Desenvolvido por <a href="https://github.com/leonardoalc" target="_blank">Sandro Leonardo</a>
         </footer>
-    </section>
-    <script src="darkmode.js"></script>
+        <script src="darkmode.js"></script>
+    </div>
 </body>
 </html>
